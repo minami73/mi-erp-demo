@@ -1,0 +1,148 @@
+:root {
+  --bg: #f6f6f4;
+  --bg-sunk: #efeeea;
+  --surface: #ffffff;
+  --surface-2: #fbfbf9;
+  --line: #cecdc5;
+  --line-strong: #d6d5cf;
+
+  --ink: #14161c;
+  --ink-2: #2d3140;
+  --ink-3: #555a6b;
+  --ink-4: #8b8f9c;
+  --ink-5: #b5b8c1;
+
+  --brand: #c41230;
+  --brand-2: #a00e28;
+  --brand-ink: #f4f5fa;
+  --accent: #c41230;
+  --accent-soft: #fde8ec;
+
+  --sec-maternal: oklch(0.72 0.14 25);
+  --sec-preescolar: oklch(0.78 0.14 75);
+  --sec-primaria: oklch(0.7 0.14 160);
+  --sec-secundaria: oklch(0.65 0.14 245);
+  --sec-bachillerato: oklch(0.62 0.14 305);
+  --sec-general: oklch(0.55 0.03 260);
+
+  --sec-maternal-soft: oklch(0.95 0.04 25);
+  --sec-preescolar-soft: oklch(0.96 0.05 75);
+  --sec-primaria-soft: oklch(0.95 0.04 160);
+  --sec-secundaria-soft: oklch(0.95 0.04 245);
+  --sec-bachillerato-soft: oklch(0.95 0.04 305);
+  --sec-general-soft: oklch(0.95 0.01 260);
+
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --shadow-sm: 0 1px 0 rgba(20, 22, 28, 0.04), 0 1px 2px rgba(20, 22, 28, 0.04);
+  --shadow:
+    0 1px 2px rgba(20, 22, 28, 0.05), 0 6px 18px -8px rgba(20, 22, 28, 0.1);
+  --shadow-lg:
+    0 10px 30px -10px rgba(20, 22, 28, 0.18),
+    0 30px 60px -30px rgba(20, 22, 28, 0.22);
+
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "ss01", "cv11";
+}
+button {
+  font: inherit;
+  color: inherit;
+}
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+::selection {
+  background: var(--accent-soft);
+  color: var(--brand);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #d6d5cf;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ─── Module-specific token presets (talleres) ──────────────── */
+:root {
+  --t-basquet: oklch(0.78 0.15 85);
+  --t-basquet-ink: #3d2d05;
+  --t-futbol: oklch(0.62 0.18 25);
+  --t-futbol-ink: #fff;
+  --t-baile: oklch(0.7 0.13 150);
+  --t-baile-ink: #173321;
+  --t-ajedrez: oklch(0.72 0.16 55);
+  --t-ajedrez-ink: #3a1e02;
+  --t-taekwando: oklch(0.78 0.1 350);
+  --t-taekwando-ink: #4a1531;
+  --t-voleibol: oklch(0.8 0.08 45);
+  --t-voleibol-ink: #4a2510;
+  --t-catecismo: oklch(0.8 0.08 230);
+  --t-catecismo-ink: #11305a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes overlayIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

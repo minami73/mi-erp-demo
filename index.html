@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Colegio Victoria — Sistema de Gestión</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500&family=Instrument+Serif&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="src/css/base.css">
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="src/data/data.js"></script>
+<script>
+  const { useState, useEffect, useRef, useMemo, useCallback } = React;
+</script>
+<script type="text/babel" src="src/components/icons/Icons.jsx"></script>
+<script type="text/babel" src="src/components/ui/Button.jsx"></script>
+<script type="text/babel" src="src/components/ui/Form.jsx"></script>
+<script type="text/babel" src="src/components/ui/Toggle.jsx"></script>
+<script type="text/babel" src="src/components/ui/Segmented.jsx"></script>
+<script type="text/babel" src="src/components/ui/Avatar.jsx"></script>
+<script type="text/babel" src="src/components/layout/Login.jsx"></script>
+<script type="text/babel" src="src/components/layout/Sidebar.jsx"></script>
+<script type="text/babel" src="src/components/layout/Header.jsx"></script>
+<script type="text/babel" src="src/components/calendar/CalendarUtils.jsx"></script>
+<script type="text/babel" src="src/components/calendar/SidePanel.jsx"></script>
+<script type="text/babel" src="src/components/calendar/MonthGrid.jsx"></script>
+<script type="text/babel" src="src/components/calendar/WeekView.jsx"></script>
+<script type="text/babel" src="src/components/calendar/DayView.jsx"></script>
+<script type="text/babel" src="src/components/calendar/EventModal.jsx"></script>
+<script type="text/babel" src="src/components/calendar/Calendar.jsx"></script>
+<script src="src/modules/horarios/constants.js"></script>
+<script src="src/modules/horarios/workshop-constants.js"></script>
+<script src="src/modules/horarios/place-lanes.js"></script>
+<script type="text/babel" src="src/modules/horarios/components/shared.js"></script>
+<script type="text/babel" src="src/modules/horarios/components/TeacherPicker.jsx"></script>
+<script type="text/babel" src="src/modules/horarios/components/Academic.jsx"></script>
+<script type="text/babel" src="src/modules/horarios/components/Workshop.jsx"></script>
+<script type="text/babel" src="src/modules/horarios/Horarios.jsx"></script>
+<script src="src/modules/incidencias/constants.js"></script>
+<script src="src/modules/incidencias/helpers.js"></script>
+<script type="text/babel" src="src/modules/incidencias/components/SemaforoDot.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/SemaforoBadge.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/GravedadBadge.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/SortTh.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/IncidenciaItem.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/NuevaIncidenciaModal.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/components/NuevoAlumnoModal.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias/Incidencias.jsx"></script>
+<script src="src/modules/incidencias-docentes/constants.js"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/components/EstadoPill.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/components/Avatar2.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/components/VersionBlock.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/components/NuevaIncidenciaModal.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/components/Version2Modal.jsx"></script>
+<script type="text/babel" src="src/modules/incidencias-docentes/IncidenciasDocentes.jsx"></script>
+<script type="text/babel" src="src/modules/organigrama/Organigrama.jsx"></script>
+<script type="text/babel" src="src/modules/alumnos-especiales/AlumnosEspeciales.jsx"></script>
+<script type="text/babel" src="src/modules/reportes/Reportes.jsx"></script>
+<script type="text/babel" src="src/modules/formatos/Formatos.jsx"></script>
+<script src="src/modules/personal/data-primaria.js"></script>
+<script src="src/modules/personal/data-bachillerato.js"></script>
+<script type="text/babel" src="src/modules/personal/Personal.jsx"></script>
+<script type="text/babel" src="src/components/admin/ModulesAdmin.jsx"></script>
+<script type="text/babel" src="src/components/admin/UsersAdmin.jsx"></script>
+<script type="text/babel" src="src/pages/Construction.jsx"></script>
+<script type="text/babel" src="src/views.jsx"></script>
+<script type="text/babel" src="src/components/layout/App.jsx"></script>
+</body>
+</html>
