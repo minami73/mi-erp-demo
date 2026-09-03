@@ -5,9 +5,6 @@
    más reciente con datos completos (2°) como referencia rápida; dentro de
    la pestaña Desempeño se puede cambiar de trimestre. */
 
-const { promedioGeneral, estadoAcademico, SEMAFORO_ACADEMICO } =
-  window.CV_ALUMNOS_CONST;
-
 const TabPendiente = ({ nombre }) => (
   <div
     style={{

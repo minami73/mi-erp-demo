@@ -5,8 +5,6 @@
    Grupos: 3 grados × A/B mixtos (decisión de John — corrige la regla
    A=niñas/B=niños, que solo aplica a primaria y secundaria). */
 
-const { hashAlumnos } = window.CV_ALUMNOS_CONST;
-
 const ALUMNOS_BACH = [
   // 1°A
   {

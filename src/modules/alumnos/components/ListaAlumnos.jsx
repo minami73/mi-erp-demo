@@ -3,14 +3,6 @@
    trimestre) y arma su propio estado de filtros, igual que Reportes.jsx
    e Incidencias.jsx. `onSelect(alumno)` sube el clic a Alumnos.jsx. */
 
-const {
-  promedioGeneral,
-  cumplimientoEntregas,
-  materiasEnRiesgo,
-  estadoAcademico,
-  SEMAFORO_ACADEMICO,
-} = window.CV_ALUMNOS_CONST;
-
 const EstadoBadge = ({ estado }) => {
   if (!estado)
     return (

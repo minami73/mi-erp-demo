@@ -170,21 +170,3 @@ const hashAlumnos = (s) => {
   for (let i = 0; i < s.length; i++) h = (h << 5) + h + s.charCodeAt(i);
   return Math.abs(h);
 };
-
-window.CV_ALUMNOS_CONST = {
-  RUBROS,
-  RUBRO_ORDEN,
-  RUBRO_COLOR,
-  TRIMESTRES,
-  SEMAFORO_ACADEMICO,
-  estadoAcademico,
-  rubroEvaluado,
-  calificacionRubro,
-  promedioMateria,
-  promedioGeneral,
-  cumplimientoEntregas,
-  materiasEnRiesgo,
-  rubrosPendientes,
-  materiasAprobadas,
-  hashAlumnos,
-};

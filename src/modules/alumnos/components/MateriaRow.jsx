@@ -4,14 +4,6 @@
    "—" en vez de un 0 o un vacío mudo. El chevron expande la fila con la
    barra de ponderación, el docente y el detalle de actividades/tareas. */
 
-const {
-  RUBROS,
-  RUBRO_COLOR,
-  estadoAcademico,
-  SEMAFORO_ACADEMICO,
-  promedioMateria,
-} = window.CV_ALUMNOS_CONST;
-
 const Dash = () => (
   <span style={{ fontSize: 12, color: "var(--ink-5)" }}>—</span>
 );

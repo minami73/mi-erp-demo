@@ -2,17 +2,6 @@
    Segmented de trimestre + 4 stat cards + tabla de materias (una fila
    expandible por materia, MateriaRow.jsx). Es el corazón del módulo. */
 
-const {
-  TRIMESTRES,
-  RUBROS,
-  estadoAcademico,
-  SEMAFORO_ACADEMICO,
-  promedioGeneral,
-  cumplimientoEntregas,
-  materiasAprobadas,
-  rubrosPendientes,
-} = window.CV_ALUMNOS_CONST;
-
 const StatCard = ({ label, valor, sub, color }) => (
   <div
     style={{

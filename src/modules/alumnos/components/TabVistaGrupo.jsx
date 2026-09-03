@@ -5,8 +5,6 @@
    un catálogo de alumnos duplicado. Clic en una fila abre la ficha del
    alumno directo en Desempeño. */
 
-const { TRIMESTRES, RUBROS } = window.CV_ALUMNOS_CONST;
-
 // Solo tiene sentido "entregadas/total" para rubros de tipo conteo —
 // examen y proyecto no se prestan a esta vista tabular por alumno.
 const TIPO_OPTS = [
