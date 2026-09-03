@@ -801,5 +801,7 @@ window.CV_ALUMNOS.bachillerato = {
   ALUMNOS: ALUMNOS_BACH,
   MATERIAS: MATERIAS_BACH,
   DESEMPENO: construirDesempeno(),
+  ENTREVISTAS: window.CV_VIDA_ESCOLAR.construirEntrevistas(ALUMNOS_BACH),
+  INCIDENCIAS: window.CV_VIDA_ESCOLAR.construirIncidencias(ALUMNOS_BACH),
   TABS: TABS_BACH,
 };

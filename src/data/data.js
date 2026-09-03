@@ -789,11 +789,11 @@ window.CV_DATA = (function () {
       active: true,
       desc: "Expediente, rendimiento académico, entrevistas e incidencias por alumno.",
       children: [
-        { id: "alumnos-maternal", label: "Alumnos Maternal" },
-        { id: "alumnos-preescolar", label: "Alumnos Preescolar" },
-        { id: "alumnos-primaria", label: "Alumnos Primaria" },
-        { id: "alumnos-secundaria", label: "Alumnos Secundaria" },
-        { id: "alumnos-bachillerato", label: "Alumnos Bachillerato" },
+        { id: "alumnos-maternal", label: "Maternal" },
+        { id: "alumnos-preescolar", label: "Preescolar" },
+        { id: "alumnos-primaria", label: "Primaria" },
+        { id: "alumnos-secundaria", label: "Secundaria" },
+        { id: "alumnos-bachillerato", label: "Bachillerato" },
       ],
     },
     {

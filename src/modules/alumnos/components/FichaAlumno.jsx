@@ -5,31 +5,17 @@
    más reciente con datos completos (2°) como referencia rápida; dentro de
    la pestaña Desempeño se puede cambiar de trimestre. */
 
-const TabPendiente = ({ nombre }) => (
-  <div
-    style={{
-      padding: "40px 24px",
-      textAlign: "center",
-      background: "var(--surface)",
-      border: "1px dashed var(--line-strong)",
-      borderRadius: 10,
-      color: "var(--ink-4)",
-      fontSize: 13.5,
-    }}
-  >
-    {nombre} — en construcción. Vive en{" "}
-    <code style={{ fontSize: 12 }}>
-      docs/contexto-modulo-personal-alumnos.md
-    </code>{" "}
-    como parte del módulo Alumnos, se maqueta en un paso posterior.
-  </div>
-);
-
 const FichaAlumno = ({
   alumno,
   listaNavegacion,
   materias,
   desempeno,
+  entrevistas,
+  incidencias,
+  onAddEntrevista,
+  onAddIncidencia,
+  onResolverIncidencia,
+  tabs,
   tabInicial,
   onSelect,
   onBack,
@@ -44,13 +30,6 @@ const FichaAlumno = ({
   const desTrimestre = desempeno[alumno.id]?.["2"] || {};
   const promedio = promedioGeneral(materias, desTrimestre);
   const estado = estadoAcademico(promedio);
-
-  const TABS = [
-    { id: "informacion", label: "Información" },
-    { id: "desempeno", label: "Desempeño" },
-    { id: "entrevistas", label: "Entrevistas" },
-    { id: "incidencias", label: "Incidencias" },
-  ];
 
   return (
     <div style={{ padding: "28px 32px", maxWidth: 1000, margin: "0 auto" }}>
@@ -183,7 +162,7 @@ const FichaAlumno = ({
           overflowX: "auto",
         }}
       >
-        {TABS.map((t) => (
+        {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setTabActivo(t.id)}
@@ -219,10 +198,19 @@ const FichaAlumno = ({
         />
       )}
       {tabActivo === "entrevistas" && (
-        <TabPendiente nombre="Pestaña Entrevistas" />
+        <TabEntrevistas
+          alumno={alumno}
+          entrevistas={entrevistas}
+          onAdd={onAddEntrevista}
+        />
       )}
       {tabActivo === "incidencias" && (
-        <TabPendiente nombre="Pestaña Incidencias" />
+        <TabIncidencias
+          alumno={alumno}
+          incidencias={incidencias}
+          onAdd={onAddIncidencia}
+          onResolver={onResolverIncidencia}
+        />
       )}
     </div>
   );

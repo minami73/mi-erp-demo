@@ -376,7 +376,7 @@ const TabVistaGrupo = ({ alumnos, materias, desempeno, onSelect }) => {
                       r.pct === 100
                         ? "#15803D"
                         : r.pct >= 75
-                          ? "#2563EB"
+                          ? "#65A30D"
                           : r.pct >= 50
                             ? "#D97706"
                             : "#DC2626",
@@ -393,7 +393,7 @@ const TabVistaGrupo = ({ alumnos, materias, desempeno, onSelect }) => {
                     r.pct === 100
                       ? "#15803D"
                       : r.pct >= 75
-                        ? "#2563EB"
+                        ? "#65A30D"
                         : r.pct >= 50
                           ? "#D97706"
                           : "#DC2626",
@@ -431,7 +431,7 @@ const TabVistaGrupo = ({ alumnos, materias, desempeno, onSelect }) => {
                 promedio >= 90
                   ? "#15803D"
                   : promedio >= 70
-                    ? "#2563EB"
+                    ? "#65A30D"
                     : promedio >= 50
                       ? "#D97706"
                       : "#DC2626",
