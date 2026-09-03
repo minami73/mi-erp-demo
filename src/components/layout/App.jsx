@@ -122,6 +122,19 @@ const App = () => {
     subtitle = "Módulo en preparación · " + seccion;
     breadcrumbs = ["Personal", seccion.replace("Personal ", "")];
     body = <Construction module={{ ...personalMod, label: seccion }} />;
+  } else if (current.startsWith("alumnos-")) {
+    const labels = {
+      "alumnos-maternal": "Alumnos Maternal",
+      "alumnos-preescolar": "Alumnos Preescolar",
+      "alumnos-primaria": "Alumnos Primaria",
+      "alumnos-secundaria": "Alumnos Secundaria",
+    };
+    const seccion = labels[current] || "Alumnos";
+    const alumnosMod = modules.find((m) => m.id === "alumnos");
+    title = seccion;
+    subtitle = "Módulo en preparación · " + seccion;
+    breadcrumbs = ["Alumnos", seccion.replace("Alumnos ", "")];
+    body = <Construction module={{ ...alumnosMod, label: seccion }} />;
   } else {
     const currentModule = modules.find((m) => m.id === current);
     if (currentModule) {

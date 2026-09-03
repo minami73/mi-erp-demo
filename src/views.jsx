@@ -47,11 +47,11 @@ window.CV_VIEWS = {
     breadcrumbs: ["Módulos", "Alumnos Especiales"],
     render: () => <AlumnosEspeciales />,
   },
-  reportes: {
-    title: "Reportes",
-    subtitle: "Tareas y actividades por alumno, materia y trimestre",
-    breadcrumbs: ["Módulos", "Reportes"],
-    render: () => <Reportes />,
+  "alumnos-bachillerato": {
+    title: "Alumnos Bachillerato",
+    subtitle: "Expediente y rendimiento académico · Ciclo 2025–2026",
+    breadcrumbs: ["Alumnos", "Bachillerato"],
+    render: () => <Alumnos config={window.CV_ALUMNOS.bachillerato} />,
   },
   formatos: {
     title: "Formatos",

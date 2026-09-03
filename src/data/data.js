@@ -832,11 +832,18 @@ window.CV_DATA = (function () {
       desc: "Expedientes y seguimiento de alumnos con necesidades especiales o situaciones sensibles.",
     },
     {
-      id: "reportes",
-      label: "Reportes Actividades y Tareas",
-      icon: "chart",
+      id: "alumnos",
+      label: "Alumnos",
+      icon: "book",
       active: true,
-      desc: "Reporte de tareas y actividades por alumno, materia y trimestre.",
+      desc: "Expediente, rendimiento académico, entrevistas e incidencias por alumno.",
+      children: [
+        { id: "alumnos-maternal", label: "Alumnos Maternal" },
+        { id: "alumnos-preescolar", label: "Alumnos Preescolar" },
+        { id: "alumnos-primaria", label: "Alumnos Primaria" },
+        { id: "alumnos-secundaria", label: "Alumnos Secundaria" },
+        { id: "alumnos-bachillerato", label: "Alumnos Bachillerato" },
+      ],
     },
     {
       id: "formatos",
