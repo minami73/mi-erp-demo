@@ -783,6 +783,20 @@ window.CV_DATA = (function () {
       desc: "Eventos institucionales por sección, con exportación y filtros.",
     },
     {
+      id: "alumnos",
+      label: "Alumnos",
+      icon: "book",
+      active: true,
+      desc: "Expediente, rendimiento académico, entrevistas e incidencias por alumno.",
+      children: [
+        { id: "alumnos-maternal", label: "Alumnos Maternal" },
+        { id: "alumnos-preescolar", label: "Alumnos Preescolar" },
+        { id: "alumnos-primaria", label: "Alumnos Primaria" },
+        { id: "alumnos-secundaria", label: "Alumnos Secundaria" },
+        { id: "alumnos-bachillerato", label: "Alumnos Bachillerato" },
+      ],
+    },
+    {
       id: "personal",
       label: "Personal",
       icon: "users",
@@ -830,20 +844,6 @@ window.CV_DATA = (function () {
       icon: "user",
       active: true,
       desc: "Expedientes y seguimiento de alumnos con necesidades especiales o situaciones sensibles.",
-    },
-    {
-      id: "alumnos",
-      label: "Alumnos",
-      icon: "book",
-      active: true,
-      desc: "Expediente, rendimiento académico, entrevistas e incidencias por alumno.",
-      children: [
-        { id: "alumnos-maternal", label: "Alumnos Maternal" },
-        { id: "alumnos-preescolar", label: "Alumnos Preescolar" },
-        { id: "alumnos-primaria", label: "Alumnos Primaria" },
-        { id: "alumnos-secundaria", label: "Alumnos Secundaria" },
-        { id: "alumnos-bachillerato", label: "Alumnos Bachillerato" },
-      ],
     },
     {
       id: "formatos",
